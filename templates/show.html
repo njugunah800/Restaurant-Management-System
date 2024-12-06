@@ -1,0 +1,42 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+
+{% block body %}
+
+
+    <br><br><br>
+    <table class="table table-info container">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone </th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Number of people</th>
+        <th>Message</th>
+        <th>Action</th>
+    </tr>
+
+    {% for x in allbookings %}
+        <tr>
+            <td>{{ x.name }}</td>
+            <td>{{ x.email }}</td>
+            <td>{{ x.phone }}</td>
+            <td>{{ x.date }}</td>
+            <td>{{ x.time }}</td>
+            <td>{{ x.people }}</td>
+            <td>{{ x.message }}</td>
+            <td>
+                <a href="/editBookings/{{ x.id }}" class="btn btn-warning">EDIT</a>
+                <a href="/deleteBookings/{{ x.id }}" class="btn btn-danger">DELETE</a>
+            </td>
+        </tr>
+
+    {% endfor %}
+
+    </table>
+
+
+{% endblock %}
+
+

@@ -1,0 +1,89 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+{% block body %}
+
+<!-- Book A Table Section -->
+    <section id="book-a-table" class="book-a-table section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Book A Table</h2>
+        <div><span>Book a</span> <span class="description-title">Table</span></div>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row g-0" data-aos="fade-up" data-aos-delay="100">
+
+         <div class="col-lg-4 reservation-img">
+             <img src="{% static 'assets/img/reserve.jpg' %}" alt="Image description" class="img-fluid" />
+         </div>
+
+
+          <div class="col-lg-8 d-flex align-items-center reservation-form-bg" data-aos="fade-up" data-aos-delay="200">
+
+            <form method="POST">
+            {% csrf_token %}
+
+              <div class="row gy-4">
+                <div class="col-lg-4 col-md-6">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required="">
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required="">
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <input type="text" class="form-control" name="phone" id="phone" placeholder="Your Phone" required="">
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <input type="date" name="date" class="form-control" id="date" placeholder="Date" required="">
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <input type="time" class="form-control" name="time" id="time" placeholder="Time" required="">
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <input type="number" class="form-control" name="people" id="people" placeholder="# of people" required="">
+                </div>
+              </div>
+
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea>
+              </div>
+
+              <div class="text-center mt-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                  Your booking request was sent. We will call back or send an Email to confirm your reservation and make your payment. Thank you!
+              </div>
+
+               <div class="text-center">
+   <style>
+    /* Button styling */
+    button[type="submit"] {
+        background-color: #ffd400; /* Green background */
+        color: white; /* White text */
+        padding: 10px 20px; /* Padding */
+        border: none; /* No border */
+        border-radius: 4px; /* Rounded corners */
+        cursor: pointer; /* Pointer cursor on hover */
+    }
+
+    /* Hover effect */
+    button[type="submit"]:hover {
+        background-color: #3c8c39; /* Darker green on hover */
+    }
+</style>
+
+<button type="submit">Book a Table</button>
+
+               </div>
+            </form>
+          </div><!-- End Reservation Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Book A Table Section -->
+
+{% endblock %}

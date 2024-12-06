@@ -1,0 +1,79 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+{% block body %}
+
+<!-- Book A Table Section -->
+    <section id="book-a-table" class="book-a-table section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Update Your Booking</h2>
+        <div><span>Book Your </span> <span class="description-title">Table Here</span></div>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row g-0" data-aos="fade-up" data-aos-delay="100">
+
+         <div class="col-lg-4 reservation-img">
+             <img src="{% static 'assets/img/reserve.jpg' %}" alt="Image description" class="img-fluid" />
+         </div>
+
+
+          <div class="col-lg-8 d-flex align-items-center reservation-form-bg" data-aos="fade-up" data-aos-delay="200">
+
+            <form method="POST" action="/updateBookings/{{book.id }}">
+            {% csrf_token %}
+
+              <div class="row gy-4">
+                <div class="col-lg-4 col-md-6">
+                  <input type="text" name="name" value="{{ book.name  }}" class="form-control" id="name" placeholder="Your Name" required="">
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <input type="email"  value="{{ book.email  }}" class="form-control" name="email" id="email" placeholder="Your Email" required="">
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <input type="text"  value="{{ book.phone  }}" class="form-control" name="phone" id="phone" placeholder="Your Phone" required="">
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <input type="date" name="date"  value="{{ book.date }}"  class="form-control" id="date" placeholder="Date" required="">
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <input type="time"  value="{{ book.time  }}" class="form-control" name="time" id="time" placeholder="Time" required="">
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <input type="number"  value="{{ book.people  }}" class="form-control" name="people" id="people" placeholder="# of people" required="">
+                </div>
+              </div>
+
+              <div class="form-group mt-3">
+                <textarea class="form-control"  value="{{ book.message  }}"  name="message" rows="5" placeholder="Message"></textarea>
+              </div>
+
+              <div class="text-center mt-3">
+                <div class="loading">Loading.............</div>
+                <div class="error-message"></div>
+                Your booking request Has Been Updated. We will call back or send an Email to confirm your reservation and make your payment. Thank you!
+              </div>
+
+             <div class="text-center">
+    <button
+        type="submit"
+        style="background-color: #e39f0e; color: black; border: none; padding: 10px 20px; font-size: 16px; border-radius: 5px; transition: all 0.3s ease; cursor: pointer;"
+        onmouseover="this.style.backgroundColor='gold'; this.style.color='white'; this.style.transform='scale(1.05)';"
+        onmouseout="this.style.backgroundColor='yellow'; this.style.color='black'; this.style.transform='scale(1)';">
+        UPDATE YOUR BOOKINGS
+    </button>
+</div>
+
+
+            </form>
+          </div><!-- End Reservation Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Book A Table Section -->
+
+{% endblock %}

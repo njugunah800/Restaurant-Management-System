@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>City Star Hotel & Restaurant</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+    {% load static %}
+
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/myfavicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/APLE.png' %}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Satisfy:wght@400&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Delicious
+  * Template URL: https://bootstrapmade.com/delicious-free-restaurant-bootstrap-theme/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header fixed-top">
+
+  <div class="topbar d-flex align-items-center">
+  <div class="container d-flex justify-content-end justify-content-md-between">
+    <div class="contact-info d-flex align-items-center">
+      <a href="https://wa.me/254793589963" class="whatsapp-button d-flex align-items-center d-none d-lg-block"style="text-decoration: none;  font-weight: bold; display: inline-flex; align-items: center;" target="_blank">
+        <i class="bi bi-whatsapp" style="font-size: 18px;  margin-right: 5px;"></i> <!-- WhatsApp Icon -->
+
+
+          <style>
+  .whatsapp-button {
+    position: relative; /* Required to position the message */
+  }
+
+  .whatsapp-button:hover {
+    color: #128C7E; /* Darker green for hover effect */
+  }
+
+  .whatsapp-button:hover i {
+    color: #128C7E; /* Darker green for the icon */
+  }
+
+  .whatsapp-button:hover span {
+    color: #128C7E; /* Darker green for the number */
+  }
+
+  .whatsapp-button:hover::after {
+    content: "Message City Star Hotel and Restaurant"; /* Display the message on hover */
+     position: absolute;
+    top: -20px; /* Position below the icon */
+    left: -80px;
+    background-color: #f3efef; /* Background color */
+    color:  #0a42ba; /* Text color */
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+    margin-top: 5px;
+    white-space: nowrap; /* Ensure text doesn't break */
+  }
+</style>
+
+
+        <span>+254 793 58 99 63</span>
+      </a>
+      <i class="bi bi-clock ms-4 d-none d-lg-flex align-items-center"><span>Mon-Sat: 6:00 AM - 10:00 PM</span></i>
+    </div>
+    <div class="cta-buttons d-flex">
+      <a href="{% url 'rate_us' %}" class="cta-btn me-2">Rate us</a>
+      <a href="{% url 'book' %}" class="cta-btn">Book a table</a>
+    </div>
+  </div>
+</div>
+
+
+     <div style="overflow: hidden; white-space: nowrap; background-color: #121313; color: #e39f0e; padding: 10px 0; font-size: 18px; font-weight: bold; text-align: center; border-radius: 5px;">
+    <span style="display: inline-block; animation: marquee 10s linear infinite;">
+        Welcome to City Star! We value your support and appreciate your trust.
+    </span>
+</div>
+
+<style>
+    @keyframes marquee {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(-100%); }
+    }
+</style>
+
+
+
+
+    <div class="branding d-flex align-items-cente">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.png" alt=""> -->
+          <h1 class="sitename">City Star Hotel & Restaurant</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="{% url 'index' %}" class="active">Home</a></li>
+            <li><a href="{% url 'about' %}" >About</a></li>
+            <li><a href="{% url 'menu' %}">Menu</a></li>
+            <li><a href="{% url 'specials' %}" >Specials</a></li>
+            <li><a href="{% url 'events' %}" >Events</a></li>
+            <li><a href="{% url 'chefs' %}" >Chefs</a></li>
+            <li><a href="{% url 'testimonials' %}" >Testimonials</a></li>
+            <li><a href="{% url 'gallery' %}" >Gallery</a></li>
+            <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="#">Dropdown 1</a></li>
+                <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="#">Deep Dropdown 1</a></li>
+                    <li><a href="#">Deep Dropdown 2</a></li>
+                    <li><a href="#">Deep Dropdown 3</a></li>
+                    <li><a href="#">Deep Dropdown 4</a></li>
+                    <li><a href="#">Deep Dropdown 5</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Dropdown 2</a></li>
+                <li><a href="#">Dropdown 3</a></li>
+                <li><a href="#">Dropdown 4</a></li>
+              </ul>
+            </li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+        <div class="carousel-item active">
+          <img src="{% static 'assets/img/hero-carousel/hero-carousel-1.jpg' %}" alt="">
+          <div class="carousel-container">
+            <h2><span>Welcome to City Star</span> Hotel & Restaurant</h2>
+            <p>City Star Hotel & Restaurant offers a cozy, elegant ambiance, unique seasonal specials, and excellent customer service. <br></br> Conveniently located on Witeithie Street near Zetech University Technology Park, it's perfect for quick meals, family dinners, or special celebrations. Explore our Menu and Book a table today!</p>
+            <div>
+              <a href="#menu" class="btn-get-started">Our Menu</a>
+              <a href="{% url 'book' %}" class="btn-get-started">Book a table</a>
+            </div>
+          </div>
+        </div><!-- End Carousel Item -->
+
+        <div class="carousel-item">
+          <img src="{% static 'assets/img/hero-carousel/hero-carousel-2.jpg' %}" alt="">
+          <div class="carousel-container">
+            <h2>Experience Culinary Excellence And Unique Seasonal Specials Await</h2>
+            <p>Experience the best of dining at City Star Hotel & Restaurant in Kiambu. Enjoy our unique seasonal specials, cozy atmosphere, and top-notch customer service. Whether you're here for a casual meal or a special occasion, we ensure a memorable experience. Reserve your table now!</p>
+            <div>
+              <a href="#menu" class="btn-get-started">Our Menu</a>
+              <a href="#book-a-table" class="btn-get-started">Book a table</a>
+            </div>
+          </div>
+        </div><!-- End Carousel Item -->
+
+        <div class="carousel-item">
+          <img src="{% static 'assets/img/hero-carousel/hero-carousel-3.jpg' %}" alt="">
+          <div class="carousel-container">
+            <h2>Book Your Table now at City Star</h2>
+              <br>Discover City Star Hotel & Restaurant, where culinary excellence meets a cozy, elegant setting.<br></br> We are Located on Witeithie Street in Kiambu, we offer unique seasonal dishes and exceptional service. Perfect for any dining occasion. <br></br>Book your table today and enjoy an unforgettable meal!</p>
+            <div>
+              <a href="#menu" class="btn-get-started">Our Menu</a>
+              <a href="#book-a-table" class="btn-get-started">Book a table</a>
+            </div>
+          </div>
+        </div><!-- End Carousel Item -->
+
+        <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
+
+        <ol class="carousel-indicators"></ol>
+
+      </div>
+    </section><!-- /Hero Section -->
+
+   <!-- About Section -->
+       <section id="about" class="about section light-background">
+
+      <div class="container">
+
+        <div class="row gy-4">
+          <div class="col-lg-6 position-relative align-self-start" data-aos="fade-up" data-aos-delay="100">
+            <img src="{% static 'assets/img/about.jpg' %}" class="img-fluid" alt="">
+            <a href="https://youtu.be/5BQP-8qglyQ" class="glightbox pulsating-play-btn"></a>
+          </div>
+          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="200">
+            <h3>Welcome to City Star Hotel & Restaurant – Where Every Bite Tells a Story.</h3>
+            <p class="fst-italic">
+             Indulge in a delightful dining experience, where exquisite flavors meet a cozy ambiance. At City Star, we believe dining is more than just a meal; it’s an experience. From the moment you step in, we strive to create a warm and inviting atmosphere, offering:
+            </p>
+            <ul>
+              <li><i class="bi bi-check2-all"></i> <span> Delectable dishes crafted with love – Our chefs use the finest, freshest ingredients to create a fusion of flavors that delight your palate.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>A diverse menu to cater to all tastes – Whether you’re craving hearty classics or exploring new culinary adventures, we’ve got something special for you.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>Perfect for every occasion – Be it a family dinner, a romantic evening, birthday party or a gathering with friends, we make every moment special.</span></li>
+            </ul>
+            <p>
+             Relax, indulge, and let us take you on a journey of exquisite tastes and unforgettable memories.
+              Ready to make your next dining moment extraordinary? Book your table now!
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+      <!-- Why Us Section -->
+    <section id="why-us" class="why-us section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Why Us?</h2>
+        <div><span>Why choose</span> <span class="description-title">Our Restaurant</span></div>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+  <div class="row gy-4">
+
+    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="card-item">
+        <span>01</span>
+        <h4><a href="" class="stretched-link">Ambiance</a></h4>
+        <p>EAt City Star Hotel & Restaurant, ambiance is a key element that enhances the overall dining experience. Our establishment boasts a cozy and elegant atmosphere, designed to make every meal feel like a special occasion. The interior is thoughtfully decorated with a blend of modern and traditional elements, creating a warm and inviting space. Soft lighting, comfortable seating, and tasteful decor contribute to a relaxing environment where guests can unwind and enjoy their meals. Whether you're dining with family, friends, or colleagues, our ambiance sets the perfect tone for any occasion, making your visit memorable and enjoyable.</p>
+      </div>
+    </div><!-- Card Item -->
+
+    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+      <div class="card-item">
+        <span>02</span>
+        <h4><a href="" class="stretched-link">Specials and Convenient Location</a></h4>
+          <p>Specials and Convenient Location: At City Star Hotel & Restaurant, we offer unique specials that highlight seasonal ingredients and the chef's creativity. These dishes are not part of our regular menu and are designed to provide a unique dining experience.<br> </br> Additionally, our convenient location on Witeithie Street in Kiambu makes us easily accessible for both locals and visitors. Our central location is perfect for a quick meal, a family dinner, or a special celebration. Whether you're in the neighborhood or coming from afar, our convenient location makes dining with us a breeze.</p>
+      </div>
+    </div><!-- Card Item -->
+
+    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+      <div class="card-item">
+        <span>03</span>
+        <h4><a href="" class="stretched-link">Customer Service</a></h4>
+        <p>At City Star Hotel & Restaurant, customer service is paramount. Our staff is trained to be attentive, friendly, and professional, ensuring every guest feels welcomed and valued. We accommodate special requests, provide personalized recommendations, and ensure prompt service. Our commitment to customer satisfaction is reflected in the positive feedback we receive and the loyal clientele we have built. Whether dining for a special occasion or a casual meal, our goal is to make you feel at home and ensure an enjoyable experience..</p>
+      </div>
+    </div><!-- Card Item -->
+
+  </div>
+
+</div>
+
+
+    </section><!-- /Why Us Section -->
+   <!-- Menu Section -->
+    <section id="menu" class="menu section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>MENU</h2>
+        <div><span>Check Our Tasty</span> <span class="description-title">Menu</span></div>
+      </div><!-- End Section Title -->
+
+      <div class="container isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul class="menu-filters isotope-filters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-starters">Starters</li>
+              <li data-filter=".filter-salads">Salads</li>
+              <li data-filter=".filter-specialty">Specialty</li>
+            </ul>
+          </div>
+        </div><!-- Menu Filters -->
+
+        <div class="row isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="col-lg-6 menu-item isotope-item filter-starters">
+            <img src="{% static 'assets/img/menu/lobster-bisque.jpg' %}" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Chocolate Delight</a><span>Ksh 620</span>
+            </div>
+            <div class="menu-ingredients">
+             rich and indulgent dessert that combines layers of velvety chocolate with a hint of sweetness, perfect for satisfying your sweet tooth.
+            </div>
+          </div><!-- Menu Item -->
+
+          <div class="col-lg-6 menu-item isotope-item filter-specialty">
+            <img src="{% static 'assets/img/menu/bread-barrel.jpg' %}" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Bread Basket</a><span>Ksh 745</span>
+            </div>
+            <div class="menu-ingredients">
+           A selection of freshly baked bread, served warm and perfect for sharing
+            </div>
+          </div><!-- Menu Item -->
+
+          <div class="col-lg-6 menu-item isotope-item filter-starters">
+            <img src="{% static 'assets/img/menu/cake.jpg' %}" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Crab Cake Delight</a><span>Ksh 850</span>
+            </div>
+            <div class="menu-ingredients">
+              A delicate crab cake served on a toasted roll with lettuce and tartar sauce
+            </div>
+          </div><!-- Menu Item -->
+
+          <div class="col-lg-6 menu-item isotope-item filter-salads">
+            <img src="{% static 'assets/img/menu/caesar.jpg' %}" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Caesar Selections</a><span>Ksh 900</span>
+            </div>
+            <div class="menu-ingredients">
+              A classic Caesar salad with crisp romaine lettuce, Parmesan cheese, and creamy Caesar dressing.We have a variety from Classic Caesar Salad to Chicken Caesar Salad
+            </div>
+          </div><!-- Menu Item -->
+
+          <div class="col-lg-6 menu-item isotope-item filter-specialty">
+            <img src="{% static 'assets/img/menu/tuscan-grilled.jpg' %}" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Tuscan Grilled</a><span>Ksh 1000</span>
+            </div>
+            <div class="menu-ingredients">
+              Grilled chicken with provolone, artichoke hearts, and roasted red pesto
+            </div>
+          </div><!-- Menu Item -->
+
+          <div class="col-lg-6 menu-item isotope-item filter-starters">
+            <img src="{% static 'assets/img/menu/mozzarella.jpg' %}" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Mozzarella Stick</a><span>Ksh 540</span>
+            </div>
+            <div class="menu-ingredients">
+              Its one of the best starter foods we have not only on our restaurant but also in Kenya.
+            </div>
+          </div><!-- Menu Item -->
+
+          <div class="col-lg-6 menu-item isotope-item filter-salads">
+            <img src="{% static 'assets/img/menu/greek-salad.jpg' %}" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Kenyan Salad</a><span>Ksh 1050</span>
+            </div>
+            <div class="menu-ingredients">
+             Fresh spinach, crisp romaine, tomatoes, and Greek olives.
+            </div>
+          </div><!-- Menu Item -->
+
+          <div class="col-lg-6 menu-item isotope-item filter-salads">
+            <img src="{% static 'assets/img/menu/spinach-salad.jpg' %}" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Spinach Salad</a><span>Ksh 1100</span>
+            </div>
+            <div class="menu-ingredients">
+              Fresh spinach with mushrooms, hard boiled egg, and warm bacon vinaigrette
+            </div>
+          </div><!-- Menu Item -->
+
+          <div class="col-lg-6 menu-item isotope-item filter-specialty">
+            <img src="{% static 'assets/img/menu/lobster-roll.jpg' %}" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Lobster Roll</a><span>Ksh 1400</span>
+            </div>
+            <div class="menu-ingredients">
+             Its a combination of   lobster meat and crisp lettuce on a toasted bulky roll
+            </div>
+          </div><!-- Menu Item -->
+
+        </div><!-- Menu Container -->
+
+      </div>
+
+    </section><!-- /Menu Section -->
+
+    <!-- Specials Section -->
+    <section id="specials" class="specials section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Specials</h2>
+        <div><span class="normal-font">Check Our</span> <span class="description-title">Specials</span></div>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row">
+          <div class="col-lg-3">
+            <ul class="nav nav-tabs flex-column">
+              <li class="nav-item">
+                <a class="nav-link active show" data-bs-toggle="tab" href="#specials-tab-1">Biryani rice And Grilled Chicken</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#specials-tab-2">Pork and Sausage Gumbo</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#specials-tab-3">Supagheti with Mushrooms</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#specials-tab-4">French Fries with Chicken</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#specials-tab-5">Raha Platter</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-9 mt-4 mt-lg-0">
+            <div class="tab-content">
+              <div class="tab-pane active show" id="specials-tab-1">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3 style="font-family: 'Arial', sans-serif;">Delicious Biryani RiCE WITH Grilled Chicken</h3>
+                    <p class="fst-italic">Biryani is a flavorful and aromatic rice dish that is popular in many parts of Kenya, especially in Central. It is made with basmati rice, spices, and usually includes meat (such as chicken, beef, goat, or lamb), but can also be made vegetarian</p>
+                    <p>Grilled chicken is a simple yet delicious dish that involves marinating chicken pieces and grilling them to perfection.<br></br>The meal goes for Ksh 750 only</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{% static 'assets/img/special1.jpg' %}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="specials-tab-2">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Enjoy Pork and Sausage Gumbo</h3>
+                    <p class="fst-italic"> Absolutely! Pork and sausage gumbo is a hearty and flavorful dish that originates from Kabati, Murang'a. It's a rich stew made with a variety of ingredients, including pork, sausage, vegetables, and a thickened broth</p>
+                    <p>This dish is perfect for a cozy meal and is sure to impress with its rich flavors and comforting texture.<br></br> It goes for Ksh 800 only</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{% static 'assets/img/special2.jpg' %}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="specials-tab-3">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Indulge in the Perfect Culinary Experience</h3>
+                    <p class="fst-italic">Spaghetti with Mushrooms is a delightful blend of al dente spaghetti tossed in a rich, creamy mushroom sauce that’s bursting with flavor. Made with fresh, hand-picked mushrooms, garlic, and aromatic herbs, this dish offers an earthy taste that’s both comforting and satisfying.</p>
+                      <>The creaminess of the sauce is perfectly balanced with a touch of olive oil and a sprinkle of parmesan, making it a wholesome and delicious choice. Packed with the natural goodness of mushrooms, it’s light yet filling, and can be customized by adding grilled chicken or shrimp for an extra protein boost. Whether you’re a fan of Italian cuisine or just looking for a comforting meal, our Spaghetti with Mushrooms promises to leave you craving more.<br></br>The meal costs Ksh 1150 only
+                    </p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{% static 'assets/img/specials-3.jpg' %}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="specials-tab-4">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Delicious French Fries with Chicken</h3>
+                    <p class="fst-italic">French Fries with Chicken is a classic combination that never fails to satisfy. Enjoy crispy, golden fries perfectly seasoned and paired with tender, juicy chicken cooked to perfection. This dish is a delightful balance of textures and flavors, making it a favorite for all ages.</p>
+                    <p>Served with a side of fresh coleslaw and your choice of tangy barbecue sauce or rich ketchup, it’s a meal that’s both comforting and indulgent. Whether you’re looking for a quick snack or a hearty meal, our French Fries with Chicken is the perfect choice for any occasion.<br></br> The meal costs Ksh 900 only</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{% static 'assets/img/special3.jpg' %}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="specials-tab-5">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Indulge in the Raha Platter at City Star Hotel & Restaurant</h3>
+                    <p class="fst-italic"> What's on the Raha Platter? ....a half kg pork , quarter kg chicken or rabbit, chips,ugali,kachumbari plus two free juices and two free ice cream cones</p>
+                    <p>Our Raha Platter is a culinary masterpiece designed to tantalize your taste buds and provide a memorable dining experience with an affordable price of Ksh 1350 only</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{% static 'assets/img/special4.jpg' %}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Specials Section -->
+
+    <!-- Events Section -->
+    <section id="events" class="events section">
+
+      <img class="slider-bg" src="{% static 'assets/img/events-bg.jpg' %}" alt="" data-aos="fade-in">
+
+      <div class="container">
+
+        <div class="swiper init-swiper" data-aos="fade-up" data-aos-delay="100">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="row gy-4 event-item">
+                <div class="col-lg-6">
+                  <img src="{% static 'assets/img/events-slider/birthday party.jpg' %}" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content">
+                  <h3>Birthday Parties</h3>
+                  <div class="price">
+                    <p><span>Ksh 17,000</span></p>
+                  </div>
+                  <p class="fst-italic">
+                    Celebrate your special day with our birthday parties package with a timeline of 12 Hours.
+                  </p>
+                  <ul>
+                    <li><i class="bi bi-check2-circle"></i> <span>Enjoy a fun and festive atmosphere with decorations,</span></li>
+                    <li><i class="bi bi-check2-circle"></i> <span>A lot of fun and entertainment,</span></li>
+                    <li><i class="bi bi-check2-circle"></i> <span>Finally our delicious menu.</span></li>
+                  </ul>
+                  <p>
+                    Whether it's a milestone birthday or a simple celebration, we make sure your day is filled with joy and laughter. Let us handle the details while you enjoy your birthday bash.
+                  </p>
+                    <p style="color: #ffc107">The Ksh 17,000 is exclusive of damages</p>
+                </div>
+              </div>
+            </div><!-- End Slider item -->
+
+
+            <div class="swiper-slide">
+              <div class="row gy-4 event-item">
+                <div class="col-lg-6">
+                  <img src="{% static 'assets/img/events-slider/wedding1.jpg' %}" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content">
+                  <h3>Wedding Parties</h3>
+                  <div class="price">
+                    <p><span>Ksh 22,000</span></p>
+                  </div>
+                  <p class="fst-italic">
+                    Celebrate your special day with elegance and style.
+                  </p>
+                  <ul>
+                    <li><i class="bi bi-check2-circle"></i> <span>Our wedding parties package includes everything you need for a memorable event.</span></li>
+                    <li><i class="bi bi-check2-circle"></i> <span>Decorations to make your Wedding event colorfull</span></li>
+                    <li><i class="bi bi-check2-circle"></i> <span>Plenty of delicious meals prepared by our professional chefs.</span></li>
+                  </ul>
+                  <p>
+                      We ensure your wedding is a dream come true. We take care of the details while you enjoy your big day by offering a free video record </p>
+                     <p style="color: #ffc107">The Ksh 22,000 is exclusive of damages</p>
+                </div>
+              </div>
+            </div><!-- End Slider item -->
+
+            <div class="swiper-slide">
+              <div class="row gy-4 event-item">
+                <div class="col-lg-6">
+                  <img src="{% static 'assets/img/events-slider/private party.jpg' %}" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content">
+                  <h3>Private Parties</h3>
+                  <div class="price">
+                    <p><span>Ksh 12,000</span></p>
+                  </div>
+                  <p class="fst-italic">
+                    Host an intimate gathering with our private parties package
+                  </p>
+                  <ul>
+                    <li><i class="bi bi-check2-circle"></i> <span>Perfect for small groups.</span></li>
+                    <li><i class="bi bi-check2-circle"></i> <span>This package offers a cozy and exclusive setting for your event.</span></li>
+                    <li><i class="bi bi-check2-circle"></i> <span>Enjoy personalized service and a tailored menu that caters to your preferences.</span></li>
+                  </ul>
+                  <p>
+                    Whether it's a family reunion or a close-knit celebration, we've got you covered.
+                  </p>
+                     <p style="color: #ffc107">The Ksh 12,000 is exclusive of damages</p>
+                </div>
+              </div>
+            </div><!-- End Slider item -->
+
+
+            <div class="swiper-slide">
+              <div class="row gy-4 event-item">
+                <div class="col-lg-6">
+                  <img src="{% static 'assets/img/events-slider/custom.jpg' %}" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content">
+                  <h3>Custom Parties</h3>
+                  <div class="price">
+                    <p><span>Ksh 11,500</span></p>
+                  </div>
+                  <p class="fst-italic">
+                    Join us to Create a unique and personalized Custom Party.
+                  </p>
+                  <ul>
+                    <li><i class="bi bi-check2-circle"></i> <span>This option allows you to design your party according to your specific needs and desires.</span></li>
+                    <li><i class="bi bi-check2-circle"></i> <span>From themed decorations to a customized menu,</span></li>
+                    <li><i class="bi bi-check2-circle"></i> <span>We work with you to bring your vision to life.</span></li>
+                  </ul>
+                  <p>
+                   Make your event truly one-of-a-kind at City Star
+                  </p>
+                     <p style="color: #ffc107">The Ksh 11,500 is exclusive of damages</p>
+                </div>
+              </div>
+            </div><!-- End Slider item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Events Section -->
+
+    <!-- Book A Table Section -->
+    <section id="book-a-table" class="book-a-table section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Book A Table</h2>
+        <div><span>Book a</span> <span class="description-title">Table</span></div>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row g-0" data-aos="fade-up" data-aos-delay="100">
+
+         <div class="col-lg-4 reservation-img">
+             <img src="{% static 'assets/img/reserve.jpg' %}" alt="Image description" class="img-fluid" />
+         </div>
+
+
+          <div class="col-lg-8 d-flex align-items-center reservation-form-bg" data-aos="fade-up" data-aos-delay="200">
+
+            <form method="POST">
+            {% csrf_token %}
+
+              <div class="row gy-4">
+                <div class="col-lg-4 col-md-6">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required="">
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required="">
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <input type="text" class="form-control" name="phone" id="phone" placeholder="Your Phone" required="">
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <input type="date" name="date" class="form-control" id="date" placeholder="Date" required="">
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <input type="time" class="form-control" name="time" id="time" placeholder="Time" required="">
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <input type="number" class="form-control" name="people" id="people" placeholder="# of people" required="">
+                </div>
+              </div>
+
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea>
+              </div>
+
+              <div class="text-center mt-3">
+                <div class="loading">Loading..........</div>
+                <div class="error-message"></div>
+                  Your booking request was sent. We will call back or send an Email to confirm your reservation and make your payment. Thank you!
+              </div>
+
+               <div class="text-center">
+                              <style>
+    /* Button styling */
+    button[type="submit"] {
+        background-color: #ffd400; /* Green background */
+        color: white; /* White text */
+        padding: 10px 20px; /* Padding */
+        border: none; /* No border */
+        border-radius: 4px; /* Rounded corners */
+        cursor: pointer; /* Pointer cursor on hover */
+    }
+
+    /* Hover effect */
+    button[type="submit"]:hover {
+        background-color: #3c8c39; /* Darker green on hover */
+    }
+</style>
+
+             </div>
+            </form>
+          </div><!-- End Reservation Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Book A Table Section -->
+
+
+<!-- Chefs Section -->
+    <section id="chefs" class="chefs section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Chefs</h2>
+        <div><span>Our Professional</span> <span class="description-title">Chefs</span></div>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-5">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="member">
+              <div class="pic"><img src="{% static 'assets/img/chefs/chef2.jpg' %}" class="img-fluid" style="width: 400px; height: 530px;" alt=""></div>
+              <div class="member-info">
+                <h4>Hildah Wanjiku</h4>
+                <span>Master Chef</span>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="member">
+              <div class="pic"><img src="{% static 'assets/img/chefs/cook4.png' %}" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Kelvin Kamau (Vokey) </h4>
+                <span>Patissier</span>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="member">
+              <div class="pic"><img src="{% static 'assets/img/chefs/cook5.png' %}" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>William Musyoka</h4>
+                <span>Cook</span>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Chefs Section -->
+
+
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section dark-background">
+
+      <img src="{% static 'assets/img/testimonials-bg.jpg' %}" class="testimonials-bg" alt="">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'assets/img/testimonials/testimonial 1.jpg' %}" class="testimonial-img" alt="">
+                <h3>Alma Mutheu</h3>
+                <h4>Ceo &amp; Founder</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Hey everyone! 🌟 I had an amazing time at City Star Restaurant in Kiambu. The unique seasonal specials, and excellent customer service made my visit unforgettable. Highly recommend checking it out! #CityStarExperience #Delicious food!.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'assets/img/testimonials/testimonial 2.jpg' %}" class="testimonial-img" alt="">
+                <h3>Sammy Kioko</h3>
+                <h4>Previous Customer</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>As a returning guest, I can confidently say that City Star Hotel and Restaurant never disappoints. The food, ambiance, and service are always top-notch. Every visit feels like a special experience, and I can't wait to return <br></br>#City Star.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'assets/img/testimonials/testimonial 3.jpg' %}" class="testimonial-img" alt="">
+                <h3>Rigathi Gachagua</h3>
+                <h4>Store Owner</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>City Star Hotel & Restaurant offers a cozy, elegant ambiance, unique seasonal specials, and excellent customer service. Conveniently located on Witeithie Street in Kiambu, it's perfect for quick meals, family dinners, or special celebrations <br></br> I am rating it 10/10😍😌😌.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'assets/img/testimonials/testimonial 4.jpg' %}" class="testimonial-img" alt="">
+                <h3>Milka Nasieku</h3>
+                <h4>Freelancer and Tiktoker</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Hey everyone! 🌟 I had an amazing time at City Star Restaurant in Kiambu. The cozy ambiance, unique seasonal specials, and top-notch customer service made my visit unforgettable. Highly recommend checking it out! <br></br> #CityStarExperience #FoodieHeaven.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'assets/img/testimonials/testimonial 5.jpg' %}" class="testimonial-img" alt="">
+                <h3>Moses Kuria</h3>
+                <h4>Entrepreneur and Politician</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>As an entrepreneur, I value both quality and professionalism. City Star Hotel and Restaurant consistently delivers exceptional service and a sophisticated environment—perfect for business meetings or casual dining. I highly recommend it to my fellow professionals.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+
+
+      <!-- Gallery Section -->
+    <section id="gallery" class="gallery section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Gallery</h2>
+        <div><span>Some photos from</span> <span class="description-title">Our Restaurant</span></div>
+      </div><!-- End Section Title -->
+
+      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-0">
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'assets/img/gallery/rest1.jpg' %}" class="glightbox" data-gallery="images-gallery">
+                <img src="{% static 'assets/img/gallery/rest1.jpg' %}" alt="" class="img-fluid" style="width: 300px; height: 240px;">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'assets/img/gallery/rest2.jpg' %}" class="glightbox" data-gallery="images-gallery">
+                <img src="{% static 'assets/img/gallery/rest2.jpg' %}" alt="" class="img-fluid" style="width: 300px; height: 240px;">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'assets/img/gallery/rest3.jpg' %}" class="glightbox" data-gallery="images-gallery">
+                <img src="{% static 'assets/img/gallery/rest3.jpg' %}" alt="" class="img-fluid" style="width: 300px; height: 240px;">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'assets/img/gallery/gallery-4.jpg' %}" class="glightbox" data-gallery="images-gallery">
+                <img src="{% static 'assets/img/gallery/gallery-4.jpg' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'assets/img/gallery/gallery-5.jpg' %}" class="glightbox" data-gallery="images-gallery">
+                <img src="{% static 'assets/img/gallery/gallery-5.jpg' %}" alt="" class="img-fluid"  >
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'assets/img/gallery/rest4.jpg' %}" class="glightbox" data-gallery="images-gallery">
+                <img src="{% static 'assets/img/gallery/rest4.jpg' %}" alt="" class="img-fluid" style="width: 300px; height: 240px;">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'assets/img/gallery/rest5.jpg' %}" class="glightbox" data-gallery="images-gallery">
+                <img src="{% static 'assets/img/gallery/rest5.jpg' %}" alt="" class="img-fluid" style="width: 300px; height: 240px;">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'assets/img/gallery/rest6.jpg' %}" class="glightbox" data-gallery="images-gallery">
+                <img src="{% static 'assets/img/gallery/rest6.jpg' %}" alt="" class="img-fluid" style="width: 300px; height: 240px;">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Gallery Section -->
+
+
+       <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <div><span>Check Our</span> <span class="description-title">Contact</span></div>
+      </div><!-- End Section Title -->
+
+      <div class="mb-5">
+       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7978.262342387207!2d37.04974301139309!3d-1.0633905830580428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f4f003930a595%3A0xa3148ca987d36efd!2sZetech%20University%20Technology%20Park%20-%20Mang&#39;u%20Campus!5e0!3m2!1sen!2ske!4v1732624149087!5m2!1sen!2ske" width=100% height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div><!-- End Google Maps -->
+
+      <div class="container" data-aos="fade">
+
+        <div class="row gy-5 gx-lg-5">
+
+          <div class="col-lg-4">
+
+            <div class="info">
+              <h3>Get in touch</h3>
+              <p>You can get in touch with City Star Hotel & Restaurant using the following contact information:</p>
+
+              <div class="info-item d-flex">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h4>Location:</h4>
+                  <p>Witeithie Street,Thika-Kiambu,Kenya</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h4>Email:</h4>
+                  <p>njugunahmoses448@gmail.com</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex">
+                <i class="bi bi-phone flex-shrink-0"></i>
+                <div>
+                  <h4>Call:</h4>
+                  <p>+254 793 58 99 63</p>
+                </div>
+              </div><!-- End Info Item -->
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-8">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required="">
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required="">
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required="">
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" placeholder="Message" required=""></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container">
+      <div class="row gy-3">
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-geo-alt icon"></i>
+          <div class="address">
+            <h4>Address</h4>
+            <p>Witeithie Street</p>
+            <p>Thika-Kiambu, Kenya</p>
+            <p></p>
+          </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-telephone icon"></i>
+          <div>
+            <h4>Contact</h4>
+            <p>
+              <strong>Phone:</strong> <span>+254 793 58 99 63</span><br>
+              <strong>Whatsapp</strong>
+<a href="https://wa.me/254793589963" style="text-decoration: none; color: #25D366; font-weight: bold; display: inline-flex; align-items: center;" target="_blank">
+  <i class="bi bi-whatsapp" style="font-size: 18px; color: #25D366; margin-right: 5px;"></i>
+  <span>+254 793 58 99 63</span>
+</a>
+<br>
+
+              <strong>Email:</strong> <span>njugunahmoses448@gmail.com</span><br>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-clock icon"></i>
+          <div>
+            <h4>Opening Hours</h4>
+            <p>
+              <strong>Mon-Sat:</strong> <span>6:00 AM - 10:00 PM</span><br>
+              <strong>Sunday</strong>: <span>Closed</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h4>Follow Us</h4>
+          <div class="social-links d-flex">
+            <a href="https://x.com/KuriahMoses2?s=09" class="twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.facebook.com/mosee.despersee.7?mibextid=rS40aB7S9Ucbxw6v" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/moses_njugunah/?utm_source=qr&r=nametag" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/moses-njuguna-068286281?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">City Star Hotel $ Restaurant</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://www.instagram.com/moses_njugunah/?utm_source=qr&r=nametag">Moses_njugunah</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

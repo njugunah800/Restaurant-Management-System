@@ -1,0 +1,119 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+{% block body %}
+
+
+<!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section dark-background">
+
+      <img src="{% static 'assets/img/testimonials-bg.jpg' %}" class="testimonials-bg" alt="">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'assets/img/testimonials/testimonial 1.jpg' %}" class="testimonial-img" alt="">
+                <h3>Alma Mutheu</h3>
+                <h4>Ceo &amp; Founder</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Hey everyone! 🌟 I had an amazing time at City Star Restaurant in Kiambu. The unique seasonal specials, and excellent customer service made my visit unforgettable. Highly recommend checking it out! #CityStarExperience #Delicious food!.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'assets/img/testimonials/testimonial 2.jpg' %}" class="testimonial-img" alt="">
+                <h3>Sammy Kioko</h3>
+                <h4>Previous Customer</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>As a returning guest, I can confidently say that City Star Hotel and Restaurant never disappoints. The food, ambiance, and service are always top-notch. Every visit feels like a special experience, and I can't wait to return <br></br>#City Star.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'assets/img/testimonials/testimonial 3.jpg' %}" class="testimonial-img" alt="">
+                <h3>Rigathi Gachagua</h3>
+                <h4>Store Owner</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>City Star Hotel & Restaurant offers a cozy, elegant ambiance, unique seasonal specials, and excellent customer service. Conveniently located on Witeithie Street in Kiambu, it's perfect for quick meals, family dinners, or special celebrations <br></br> I am rating it 10/10😍😌😌.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'assets/img/testimonials/testimonial 4.jpg' %}" class="testimonial-img" alt="">
+                <h3>Milka Nasieku</h3>
+                <h4>Freelancer and Tiktoker</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Hey everyone! 🌟 I had an amazing time at City Star Restaurant in Kiambu. The cozy ambiance, unique seasonal specials, and top-notch customer service made my visit unforgettable. Highly recommend checking it out! <br></br> #CityStarExperience #FoodieHeaven.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'assets/img/testimonials/testimonial 5.jpg' %}" class="testimonial-img" alt="">
+                <h3>Moses Kuria</h3>
+                <h4>Entrepreneur and Politician</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>As an entrepreneur, I value both quality and professionalism. City Star Hotel and Restaurant consistently delivers exceptional service and a sophisticated environment—perfect for business meetings or casual dining. I highly recommend it to my fellow professionals.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+
+{% endblock %}

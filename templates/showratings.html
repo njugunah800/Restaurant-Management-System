@@ -1,0 +1,69 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+
+{% block body %}
+    <style>
+        /* Ensure padding-top to avoid collision with header */
+        body {
+            padding-top: 200px; /* Adjust this based on your header's height */
+        }
+
+        /* Center the h1 element */
+        h1 {
+            text-align: center;
+            margin-top: 50px; /* Add margin to the top of the h1 element */
+            color: #3dd5f3;
+        }
+
+        /* Style for circular images */
+        .circular-image {
+            width: 150px; /* Adjust the size as needed */
+            height: 150px; /* Adjust the size as needed */
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* Styling for the table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #ffffff; /* Light background color for the table */
+        }
+
+        th, td {
+            padding: 12px;
+            border: 4px solid #225aaa;
+            text-align: left;
+        }
+
+        th {
+            background-color: #121313; /* Green background for header */
+            color: #e80d0d; /* White text for header */
+        }
+    </style>
+
+    <h1>User Ratings</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Occupation</th>
+                <th>Rating</th>
+                <th>Message</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for feedback in feedbacks %}
+                <tr>
+                    <td>{{ feedback.name }}</td>
+                    <td>{{ feedback.occupation }}</td>
+                    <td>{{ feedback.rating }}</td>
+                    <td>{{ feedback.message }}</td>
+                    <td><img src="{{ feedback.image.url }}" alt="User Image" class="circular-image"></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

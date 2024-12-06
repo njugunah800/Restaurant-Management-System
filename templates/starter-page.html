@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>City Star Hotel $ Restaurant</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+    {% load static %}
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/myfavicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/APLE.png' %}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Satisfy:wght@400&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Delicious
+  * Template URL: https://bootstrapmade.com/delicious-free-restaurant-bootstrap-theme/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="starter-page-page">
+
+  <header id="header" class="header fixed-top">
+
+
+
+
+      <div class="topbar d-flex align-items-center">
+  <div class="container d-flex justify-content-end justify-content-md-between">
+    <div class="contact-info d-flex align-items-center">
+      <a href="https://wa.me/254793589963" class="whatsapp-button d-flex align-items-center d-none d-lg-block"style="text-decoration: none; font-weight: bold; display: inline-flex; align-items: center;" target="_blank">
+        <i class="bi bi-whatsapp" style="font-size: 18px;  margin-right: 5px;"></i> <!-- WhatsApp Icon -->
+
+           <style>
+  .whatsapp-button {
+    position: relative; /* Required to position the message */
+  }
+
+  .whatsapp-button:hover {
+    color: #128C7E; /* Darker green for hover effect */
+  }
+
+  .whatsapp-button:hover i {
+    color: #128C7E; /* Darker green for the icon */
+  }
+
+  .whatsapp-button:hover span {
+    color: #128C7E; /* Darker green for the number */
+  }
+
+  .whatsapp-button:hover::after {
+    content: "Message City Star Hotel and Restaurant"; /* Display the message on hover */
+     position: absolute;
+    top: -20px; /* Position below the icon */
+    left: -80px;
+    background-color: #f3efef; /* Background color */
+    color: #0a42ba; /* Text color */
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+    margin-top: 5px;
+    white-space: nowrap; /* Ensure text doesn't break */
+  }
+</style>
+
+        <span>+254 793 58 99 63</span>
+      </a>
+      <i class="bi bi-clock ms-4 d-none d-lg-flex align-items-center"><span>Mon-Sat: 6:00 AM - 10:00 PM</span></i>
+    </div>
+    <div class="cta-buttons d-flex">
+      <a href="{% url 'rate_us' %}" class="cta-btn me-2">Rate us</a>
+      <a href="{% url 'book' %}" class="cta-btn">Book a table</a>
+    </div>
+  </div>
+</div>
+
+  <div style="overflow: hidden; white-space: nowrap; background-color: #121313; color: #e39f0e; padding: 10px 0; font-size: 18px; font-weight: bold; text-align: center; border-radius: 5px;">
+    <span style="display: inline-block; animation: marquee 10s linear infinite;">
+        Welcome to City Star! We value your support and appreciate your trust.
+    </span>
+</div>
+
+<style>
+    @keyframes marquee {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(-100%); }
+    }
+</style>
+
+
+
+
+    <div class="branding d-flex align-items-cente">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.png" alt=""> -->
+          <h1 class="sitename">City Star Hotel & Restaurant</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'about' %}" >About</a></li>
+            <li><a href="{% url 'menu' %}">Menu</a></li>
+            <li><a href="{% url 'specials' %}">Specials</a></li>
+            <li><a href="{% url 'events' %}">Events</a></li>
+            <li><a href="{% url 'chefs' %}">Chefs</a></li>
+             <li><a href="{% url 'testimonials' %}">Testimonials</a></li>
+            <li><a href="{% url 'gallery' %}">Gallery</a></li>
+            <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="#">Dropdown 1</a></li>
+                <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="#">Deep Dropdown 1</a></li>
+                    <li><a href="#">Deep Dropdown 2</a></li>
+                    <li><a href="#">Deep Dropdown 3</a></li>
+                    <li><a href="#">Deep Dropdown 4</a></li>
+                    <li><a href="#">Deep Dropdown 5</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Dropdown 2</a></li>
+                <li><a href="#">Dropdown 3</a></li>
+                <li><a href="#">Dropdown 4</a></li>
+              </ul>
+            </li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main class="main">
+
+      {% block body %}
+
+      {% endblock %}
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container">
+      <div class="row gy-3">
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-geo-alt icon"></i>
+          <div class="address">
+            <h4>Address</h4>
+            <p>Witeithie Street</p>
+            <p>Thika-Kiambu,Kenya</p>
+            <p></p>
+          </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-telephone icon"></i>
+          <div>
+            <h4>Contact</h4>
+            <p>
+              <strong>Phone:</strong> <span>+254793589963</span><br>
+                <strong></strong>
+<a href="https://wa.me/254793589963" style="text-decoration: none; font-weight: bold; display: inline-flex; align-items: center;" target="_blank">
+  <i class="bi bi-whatsapp" style="font-size: 18px; margin-right: 5px;"></i>
+  <span>+254 793 58 99 63</span>
+</a>
+<br>
+              <strong>Email:</strong> <span>njugunahmoses448@gmail.com</span><br>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-clock icon"></i>
+          <div>
+            <h4>Opening Hours</h4>
+            <p>
+              <strong>Mon-Sat:</strong> <span>6:00AM - 10:00PM</span><br>
+              <strong>Sunday</strong>: <span>Closed</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h4>Follow Us</h4>
+          <div class="social-links d-flex">
+            <a href="https://x.com/KuriahMoses2?s=09" class="twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.facebook.com/mosee.despersee.7?mibextid=rS40aB7S9Ucbxw6v" class="facebook"><i class="bi bi-facebook"></i></a>
+           <a href="https://www.instagram.com/moses_njugunah/?utm_source=qr&r=nametag" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/moses-njuguna-068286281?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">City Star Hotel % Restaurant</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://www.instagram.com/moses_njugunah/?utm_source=qr&r=nametag">Moses_njugunah</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

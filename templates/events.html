@@ -1,0 +1,144 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+{% block body %}
+
+<!-- Events Section -->
+    <section id="events" class="events section">
+
+      <img class="slider-bg" src="{% static 'assets/img/events-bg.jpg' %}" alt="" data-aos="fade-in">
+
+      <div class="container">
+
+        <div class="swiper init-swiper" data-aos="fade-up" data-aos-delay="100">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="row gy-4 event-item">
+                <div class="col-lg-6">
+                  <img src="{% static 'assets/img/events-slider/birthday party.jpg' %}" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content">
+                  <h3>Birthday Parties</h3>
+                  <div class="price">
+                    <p><span>Ksh 17,000</span></p>
+                  </div>
+                  <p class="fst-italic">
+                    Celebrate your special day with our birthday parties package with a timeline of 12 Hours.
+                  </p>
+                  <ul>
+                    <li><i class="bi bi-check2-circle"></i> <span>Enjoy a fun and festive atmosphere with decorations,</span></li>
+                    <li><i class="bi bi-check2-circle"></i> <span>A lot of fun and entertainment,</span></li>
+                    <li><i class="bi bi-check2-circle"></i> <span>Finally our delicious menu.</span></li>
+                  </ul>
+                  <p>
+                    Whether it's a milestone birthday or a simple celebration, we make sure your day is filled with joy and laughter. Let us handle the details while you enjoy your birthday bash.
+                  </p>
+                    <p style="color: #ffc107">The Ksh 17,000 is exclusive of damages</p>
+                </div>
+              </div>
+            </div><!-- End Slider item -->
+
+
+            <div class="swiper-slide">
+              <div class="row gy-4 event-item">
+                <div class="col-lg-6">
+                  <img src="{% static 'assets/img/events-slider/wedding1.jpg' %}" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content">
+                  <h3>Wedding Parties</h3>
+                  <div class="price">
+                    <p><span>Ksh 22,000</span></p>
+                  </div>
+                  <p class="fst-italic">
+                    Celebrate your special day with elegance and style.
+                  </p>
+                  <ul>
+                    <li><i class="bi bi-check2-circle"></i> <span>Our wedding parties package includes everything you need for a memorable event.</span></li>
+                    <li><i class="bi bi-check2-circle"></i> <span>Decorations to make your Wedding event colorfull</span></li>
+                    <li><i class="bi bi-check2-circle"></i> <span>Plenty of delicious meals prepared by our professional chefs.</span></li>
+                  </ul>
+                  <p>
+                      We ensure your wedding is a dream come true. We take care of the details while you enjoy your big day by offering a free video record </p>
+                     <p style="color: #ffc107">The Ksh 22,000 is exclusive of damages</p>
+                </div>
+              </div>
+            </div><!-- End Slider item -->
+
+            <div class="swiper-slide">
+              <div class="row gy-4 event-item">
+                <div class="col-lg-6">
+                  <img src="{% static 'assets/img/events-slider/private party.jpg' %}" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content">
+                  <h3>Private Parties</h3>
+                  <div class="price">
+                    <p><span>Ksh 12,000</span></p>
+                  </div>
+                  <p class="fst-italic">
+                    Host an intimate gathering with our private parties package
+                  </p>
+                  <ul>
+                    <li><i class="bi bi-check2-circle"></i> <span>Perfect for small groups.</span></li>
+                    <li><i class="bi bi-check2-circle"></i> <span>This package offers a cozy and exclusive setting for your event.</span></li>
+                    <li><i class="bi bi-check2-circle"></i> <span>Enjoy personalized service and a tailored menu that caters to your preferences.</span></li>
+                  </ul>
+                  <p>
+                    Whether it's a family reunion or a close-knit celebration, we've got you covered.
+                  </p>
+                     <p style="color: #ffc107">The Ksh 12,000 is exclusive of damages</p>
+                </div>
+              </div>
+            </div><!-- End Slider item -->
+
+
+            <div class="swiper-slide">
+              <div class="row gy-4 event-item">
+                <div class="col-lg-6">
+                  <img src="{% static 'assets/img/events-slider/custom.jpg' %}" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content">
+                  <h3>Custom Parties</h3>
+                  <div class="price">
+                    <p><span>Ksh 11,500</span></p>
+                  </div>
+                  <p class="fst-italic">
+                    Join us to Create a unique and personalized Custom Party.
+                  </p>
+                  <ul>
+                    <li><i class="bi bi-check2-circle"></i> <span>This option allows you to design your party according to your specific needs and desires.</span></li>
+                    <li><i class="bi bi-check2-circle"></i> <span>From themed decorations to a customized menu,</span></li>
+                    <li><i class="bi bi-check2-circle"></i> <span>We work with you to bring your vision to life.</span></li>
+                  </ul>
+                  <p>
+                   Make your event truly one-of-a-kind at City Star
+                  </p>
+                     <p style="color: #ffc107">The Ksh 11,500 is exclusive of damages</p>
+                </div>
+              </div>
+            </div><!-- End Slider item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Events Section -->
+
+
+{% endblock %}

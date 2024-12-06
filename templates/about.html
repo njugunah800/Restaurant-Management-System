@@ -1,0 +1,81 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+{% block body %}
+
+     <!-- About Section -->
+       <section id="about" class="about section light-background">
+
+      <div class="container">
+
+        <div class="row gy-4">
+          <div class="col-lg-6 position-relative align-self-start" data-aos="fade-up" data-aos-delay="100">
+            <img src="{% static 'assets/img/about.jpg' %}" class="img-fluid" alt="">
+            <a href="https://youtu.be/5BQP-8qglyQ" class="glightbox pulsating-play-btn"></a>
+          </div>
+          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="200">
+            <h3>Welcome to City Star Hotel & Restaurant – Where Every Bite Tells a Story.</h3>
+            <p class="fst-italic">
+             Indulge in a delightful dining experience, where exquisite flavors meet a cozy ambiance. At City Star, we believe dining is more than just a meal; it’s an experience. From the moment you step in, we strive to create a warm and inviting atmosphere, offering:
+            </p>
+            <ul>
+              <li><i class="bi bi-check2-all"></i> <span> Delectable dishes crafted with love – Our chefs use the finest, freshest ingredients to create a fusion of flavors that delight your palate.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>A diverse menu to cater to all tastes – Whether you’re craving hearty classics or exploring new culinary adventures, we’ve got something special for you.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>Perfect for every occasion – Be it a family dinner, a romantic evening, birthday party or a gathering with friends, we make every moment special.</span></li>
+            </ul>
+            <p>
+             Relax, indulge, and let us take you on a journey of exquisite tastes and unforgettable memories.
+              Ready to make your next dining moment extraordinary? Book your table now!
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+      <!-- Why Us Section -->
+    <section id="why-us" class="why-us section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Why Us?</h2>
+        <div><span>Why choose</span> <span class="description-title">Our Restaurant</span></div>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+  <div class="row gy-4">
+
+    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="card-item">
+        <span>01</span>
+        <h4><a href="" class="stretched-link">Ambiance</a></h4>
+        <p>EAt City Star Hotel & Restaurant, ambiance is a key element that enhances the overall dining experience. Our establishment boasts a cozy and elegant atmosphere, designed to make every meal feel like a special occasion. The interior is thoughtfully decorated with a blend of modern and traditional elements, creating a warm and inviting space. Soft lighting, comfortable seating, and tasteful decor contribute to a relaxing environment where guests can unwind and enjoy their meals. Whether you're dining with family, friends, or colleagues, our ambiance sets the perfect tone for any occasion, making your visit memorable and enjoyable.</p>
+      </div>
+    </div><!-- Card Item -->
+
+    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+      <div class="card-item">
+        <span>02</span>
+        <h4><a href="" class="stretched-link">Specials and Convenient Location</a></h4>
+          <p>Specials and Convenient Location: At City Star Hotel & Restaurant, we offer unique specials that highlight seasonal ingredients and the chef's creativity. These dishes are not part of our regular menu and are designed to provide a unique dining experience.<br> </br> Additionally, our convenient location on Witeithie Street in Kiambu makes us easily accessible for both locals and visitors. Our central location is perfect for a quick meal, a family dinner, or a special celebration. Whether you're in the neighborhood or coming from afar, our convenient location makes dining with us a breeze.</p>
+      </div>
+    </div><!-- Card Item -->
+
+    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+      <div class="card-item">
+        <span>03</span>
+        <h4><a href="" class="stretched-link">Customer Service</a></h4>
+        <p>At City Star Hotel & Restaurant, customer service is paramount. Our staff is trained to be attentive, friendly, and professional, ensuring every guest feels welcomed and valued. We accommodate special requests, provide personalized recommendations, and ensure prompt service. Our commitment to customer satisfaction is reflected in the positive feedback we receive and the loyal clientele we have built. Whether dining for a special occasion or a casual meal, our goal is to make you feel at home and ensure an enjoyable experience..</p>
+      </div>
+    </div><!-- Card Item -->
+
+  </div>
+
+</div>
+
+
+    </section><!-- /Why Us Section -->
+
+
+
+{% endblock %}

@@ -1,0 +1,108 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+{% block body %}
+
+<!-- Specials Section -->
+    <section id="specials" class="specials section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Specials</h2>
+        <div><span class="normal-font">Check Our</span> <span class="description-title">Specials</span></div>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row">
+          <div class="col-lg-3">
+            <ul class="nav nav-tabs flex-column">
+              <li class="nav-item">
+                <a class="nav-link active show" data-bs-toggle="tab" href="#specials-tab-1">Biryani rice And Grilled Chicken</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#specials-tab-2">Pork and Sausage Gumbo</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#specials-tab-3">Supagheti with Mushrooms</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#specials-tab-4">French Fries with Chicken</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#specials-tab-5">Raha Platter</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-9 mt-4 mt-lg-0">
+            <div class="tab-content">
+              <div class="tab-pane active show" id="specials-tab-1">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3 style="font-family: 'Arial', sans-serif;">Delicious Biryani RiCE WITH Grilled Chicken</h3>
+                    <p class="fst-italic">Biryani is a flavorful and aromatic rice dish that is popular in many parts of Kenya, especially in Central. It is made with basmati rice, spices, and usually includes meat (such as chicken, beef, goat, or lamb), but can also be made vegetarian</p>
+                    <p>Grilled chicken is a simple yet delicious dish that involves marinating chicken pieces and grilling them to perfection.<br></br>The meal goes for Ksh 750 only</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{% static 'assets/img/special1.jpg' %}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="specials-tab-2">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Enjoy Pork and Sausage Gumbo</h3>
+                    <p class="fst-italic"> Absolutely! Pork and sausage gumbo is a hearty and flavorful dish that originates from Kabati, Murang'a. It's a rich stew made with a variety of ingredients, including pork, sausage, vegetables, and a thickened broth</p>
+                    <p>This dish is perfect for a cozy meal and is sure to impress with its rich flavors and comforting texture.<br></br> It goes for Ksh 800 only</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{% static 'assets/img/special2.jpg' %}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="specials-tab-3">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Indulge in the Perfect Culinary Experience</h3>
+                    <p class="fst-italic">Spaghetti with Mushrooms is a delightful blend of al dente spaghetti tossed in a rich, creamy mushroom sauce that’s bursting with flavor. Made with fresh, hand-picked mushrooms, garlic, and aromatic herbs, this dish offers an earthy taste that’s both comforting and satisfying.</p>
+                      <>The creaminess of the sauce is perfectly balanced with a touch of olive oil and a sprinkle of parmesan, making it a wholesome and delicious choice. Packed with the natural goodness of mushrooms, it’s light yet filling, and can be customized by adding grilled chicken or shrimp for an extra protein boost. Whether you’re a fan of Italian cuisine or just looking for a comforting meal, our Spaghetti with Mushrooms promises to leave you craving more.<br></br>The meal costs Ksh 1150 only
+                    </p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{% static 'assets/img/specials-3.jpg' %}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="specials-tab-4">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Delicious French Fries with Chicken</h3>
+                    <p class="fst-italic">French Fries with Chicken is a classic combination that never fails to satisfy. Enjoy crispy, golden fries perfectly seasoned and paired with tender, juicy chicken cooked to perfection. This dish is a delightful balance of textures and flavors, making it a favorite for all ages.</p>
+                    <p>Served with a side of fresh coleslaw and your choice of tangy barbecue sauce or rich ketchup, it’s a meal that’s both comforting and indulgent. Whether you’re looking for a quick snack or a hearty meal, our French Fries with Chicken is the perfect choice for any occasion.<br></br> The meal costs Ksh 900 only</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{% static 'assets/img/special3.jpg' %}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="specials-tab-5">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Indulge in the Raha Platter at City Star Hotel & Restaurant</h3>
+                    <p class="fst-italic"> What's on the Raha Platter? ....a half kg pork , quarter kg chicken or rabbit, chips,ugali,kachumbari plus two free juices and two free ice cream cones</p>
+                    <p>Our Raha Platter is a culinary masterpiece designed to tantalize your taste buds and provide a memorable dining experience with an affordable price of Ksh 1350 only</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{% static 'assets/img/special4.jpg' %}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Specials Section -->
+
+
+{% endblock %}
